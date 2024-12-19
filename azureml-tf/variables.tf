@@ -4,28 +4,27 @@
 # https://opensource.org/licenses/MIT
 
 variable "resource_group" {
-  default = "aml-terraform-demo"
 }
 
 variable "workspace_display_name" {
-  default = "aml-terraform-demo"
 }
 
 variable "location" {
-  default = "West Europe"
 }
 
 variable "deploy_aks" {
-  default = false
 }
 
 variable "prefix" {
   type = string
-  default = "aml"
+}
+
+variable "subscription_id" {
+
 }
 
 resource "random_string" "postfix" {
-  length = 6
+  length  = 6
   special = false
-  upper = false
+  upper   = false
 }
